@@ -1,43 +1,33 @@
 import { useState } from "react";
 
-import logo from "@/assets/images/logo.svg";
+import logo from "/assets/images/logo.svg";
+import Header from "@/components/Header";
+import Sidebar from "@/components/Sidebar";
 
 function App() {
   const [count, setCount] = useState(0);
 
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Hello Vite + React!</p>
-        <p>
-          <button type="button" onClick={() => setCount((count) => count + 1)}>
-            count is: {count}
-          </button>
-        </p>
-        <p>
-          Edit <code>App.tsx</code> and save to test HMR updates.
-        </p>
-        <p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-          {" | "}
-          <a
-            className="App-link"
-            href="https://vitejs.dev/guide/features.html"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Vite Docs
-          </a>
-        </p>
-      </header>
+    <div className="text-gray-700 bg-gray-200 font-sans antialiased">
+      <div className="h-screen flex flex-col">
+        <Header />
+        <div className="flex-1 flex overflow-hidden">
+          <div className="flex bg-gray-100 overflow-y-auto">
+            <Sidebar />
+          </div>
+
+          <main className="flex-1 flex flex-col overflow-y-auto px-6 py-4 bg-gray-200">
+            <div className="flex flex-col h-full">
+              <h3 className="text-2xl font-bold mb-2 text-gray-700">
+                Overview
+              </h3>
+              <div className="flex-1 rounded-lg border-4 border-dashed border-gray-300 flex justify-center items-center	">
+                <img src={logo} className="App-logo" alt="logo" />
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
   );
 }
