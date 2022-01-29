@@ -4,6 +4,7 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
+    "build:github": "tsc && vite build --base=/dashboard-vite-tailwind-radix/",
     "preview": "vite preview"
   },
   "dependencies": {
