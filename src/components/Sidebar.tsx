@@ -136,32 +136,29 @@ export default function Sidebar(props: any) {
             Extra Pages
           </h2>
           <div className="mt-3 flex flex-col space-y-2">
-            <a
-              href="{{ $page->baseUrl }}/"
-              className="block text-sm font-medium text-gray-700"
-            >
+            <a href="/" className="block text-sm font-medium text-gray-700">
               Dashboard
             </a>
             <a
-              href="{{ $page->baseUrl }}/cards"
+              href="/login"
               className="block text-sm font-medium text-gray-700"
             >
               Cards
             </a>
             <a
-              href="{{ $page->baseUrl }}/lists"
+              href="/login"
               className="block text-sm font-medium text-gray-700"
             >
               Lists
             </a>
             <a
-              href="{{ $page->baseUrl }}/inbox"
+              href="/login"
               className="block text-sm font-medium text-gray-700"
             >
               Inbox
             </a>
             <a
-              href="{{ $page->baseUrl }}/login"
+              href="/login"
               className="block text-sm font-medium text-gray-700"
             >
               Login

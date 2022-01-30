@@ -1,12 +1,8 @@
-import { useState } from "react";
-
 import logo from "/assets/images/logo.svg";
 import Header from "@/components/Header";
 import Sidebar from "@/components/Sidebar";
 
-function App() {
-  const [count, setCount] = useState(0);
-
+export default function Dashboard() {
   return (
     <div className="text-gray-700 bg-gray-200 font-sans antialiased">
       <div className="h-screen flex flex-col">
@@ -31,5 +27,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
